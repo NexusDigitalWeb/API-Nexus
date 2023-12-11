@@ -1,6 +1,6 @@
 interface questions {
     question: String,
-    respones: String
+    response: String
 }
 
 export default questions

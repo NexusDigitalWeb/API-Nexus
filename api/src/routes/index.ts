@@ -1,10 +1,12 @@
 import { Request, Response, Router } from "express";
 import servicesRouter from "./Services.routes";
+import questionRouter from "./Questinos.routes"
 import errorHandler from "../middlewares/errorHandler.middlewares";
 
 const routes = Router();
 
 routes.use("/services", servicesRouter);
+routes.use("/questions", questionRouter )
 
 routes.use(errorHandler);
 

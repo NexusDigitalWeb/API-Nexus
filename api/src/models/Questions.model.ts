@@ -7,15 +7,15 @@ const schema = new mongoose.Schema<questions>({
         trim: true,
         required: true
     },
-    respones: {
+    response: {
         type: String,
         trim: true,
         required: true
     },
     
 },{
-    timestamps: true,
-    versionKey: true
+    timestamps: false,
+    versionKey: false
 });
 
 const QuestionsModel = mongoose.model('Questions', schema)
