@@ -1,8 +1,12 @@
+import Questions from '@/components/questions/Questions'
 import React from 'react'
 
 const Home = (): React.ReactElement => {
   return (
-    <div>Home</div>
+    <>
+      <Questions />
+    </>
+
   )
 }
 
