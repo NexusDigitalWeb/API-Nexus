@@ -13,7 +13,7 @@ const Navbar = (): React.ReactElement => {
     <div className='h-[100px] w-[100%]'>
       <div className='flex justify-between pr-4 pl-4 h-full'>
       <Link href='/' className='h-full flex items-center'>
-        <p className='text-2xl font-extrabold border-b-2 border-black'><span className='text-[#a4ff35] border-5'>N</span>exus.</p>
+        <p className='text-2xl font-extrabold'>Nexus.</p>
       </Link>
 
       <button onClick={handleClick}>
