@@ -4,7 +4,7 @@ import BookingsButton from '../buttons/BookingsButton'
 
 const HomeComponent = (): React.ReactElement => {
   return (
-    <div className='h-screen w-full justify-center items-center'>
+    <div className='w-full justify-center items-center'>
         <div className='flex flex-col h-full'>
             <h1 className='font-medium text-[35px] p-5 leading-[54.87px]'>Transformamos tu presencia digital para garantizar tu éxito.</h1>
             <Image src='/Illustration.png' alt='home-image' width={361.44} height={310} className='w-[361.44px] h-[280px] mt-5' />

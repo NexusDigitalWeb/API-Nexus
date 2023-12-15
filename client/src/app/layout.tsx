@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.className} bg-[#F3F3F3] overflow-x-hidden`}>{children}</body>
+      <body className={`${spaceGrotesk.className} bg-[#F3F3F3] overflow-x-hidden flex flex-col gap-20`}>{children}</body>
     </html>
   )
 }
