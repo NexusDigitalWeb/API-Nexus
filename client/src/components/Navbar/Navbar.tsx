@@ -17,7 +17,7 @@ const Navbar = (): React.ReactElement => {
       </Link>
 
       <button onClick={handleClick}>
-        <Image src='/Burgermenuicon.png' alt='burger-menu-icon' width={20} height={20}/>
+        <Image src='https://res.cloudinary.com/dcvvyhf8p/image/upload/v1702579474/Principal%20web%20Nexus/hbzjkxegujijaeii7ely.png' alt='burger-menu-icon' width={20} height={20}/>
       </button>
       </div>
       <NavbarMenuMobile open={isMenuOpen} set={setIsMenuOpen}/>

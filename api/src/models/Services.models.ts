@@ -13,6 +13,11 @@ const schema = new mongoose.Schema<Services>(
       trim: true,
       required: true,
     },
+    photo: {
+      type: String,
+      trim: true,
+      required: true,
+    },
   },
   {
     timestamps: false,
@@ -20,5 +25,5 @@ const schema = new mongoose.Schema<Services>(
   }
 );
 
-const ServicesModel = mongoose.model('Services', schema);
+const ServicesModel = mongoose.model("Services", schema);
 export default ServicesModel;

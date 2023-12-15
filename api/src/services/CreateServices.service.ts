@@ -14,9 +14,9 @@ class CreateServices {
     }
 
     public createNewService = async (body: Services) => {
-        const { title, description } = body;
+        const { title, description, photo } = body;
         
-        if ([title, description].includes('')) throw new BadRequestException('Fields cannot be empty');
+        if ([title, description, photo].includes('')) throw new BadRequestException('Fields cannot be empty');
         if (await this.checkService(title)) throw new BadRequestException('Service already exists') 
 
         const response = {
