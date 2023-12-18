@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar/Navbar'
 import HomeComponent from '@/components/home/HomeComponent'
 import React from 'react'
 import Questions from '@/components/questions/Questions'
+import FomrMail from '@/components/fomr-mail/FomrMail'
 
 const Home = (): React.ReactElement => {
   return (
@@ -9,6 +10,7 @@ const Home = (): React.ReactElement => {
       <Navbar />
       <HomeComponent/>
       <Questions/>
+      <FomrMail/>
     </>
   )
 }
