@@ -2,6 +2,7 @@
 import React from 'react'
 import anime from "animejs";
 import { Waypoint } from "react-waypoint";
+import ServicesComponent from './ServicesComponent';
 
 
 const ServicesPage = (): React.ReactElement => {
@@ -15,7 +16,7 @@ const ServicesPage = (): React.ReactElement => {
   };
   
   return (
-    <div className='h-screen w-full'>
+    <div className='h-full w-full'>
       <div className='flex flex-col justify-center items-center relative left-[1000px] animation-waypoint'>
         <div className='bg-[#B9FF66] w-[60%] rounded-[10px] mt-3'>
           <h2 className='text-[36px] text-center font-bold'>Servicios</h2>
@@ -24,6 +25,7 @@ const ServicesPage = (): React.ReactElement => {
         <p className='mt-5 p-4 text-center'>Como agencia digital, optimizamos tu expansión en línea con soluciones profesionales.</p>
       </div>
       <Waypoint onEnter={() => handleWaypointToLeft('.animation-waypoint')}/>
+      <ServicesComponent/>
     </div>
   )
 }
