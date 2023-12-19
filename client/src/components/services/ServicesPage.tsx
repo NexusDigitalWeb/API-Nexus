@@ -3,6 +3,7 @@ import React from 'react'
 import anime from "animejs";
 import { Waypoint } from "react-waypoint";
 import ServicesComponent from './ServicesComponent';
+import GetProposal from './GetProposal';
 
 
 const ServicesPage = (): React.ReactElement => {
@@ -16,7 +17,7 @@ const ServicesPage = (): React.ReactElement => {
   };
   
   return (
-    <div className='h-full w-full'>
+    <div className='h-full w-full mt-10'>
       <div className='flex flex-col justify-center items-center relative left-[1000px] animation-waypoint'>
         <div className='bg-[#B9FF66] w-[60%] rounded-[10px] mt-3'>
           <h2 className='text-[36px] text-center font-bold'>Servicios</h2>
@@ -26,6 +27,7 @@ const ServicesPage = (): React.ReactElement => {
       </div>
       <Waypoint onEnter={() => handleWaypointToLeft('.animation-waypoint')}/>
       <ServicesComponent/>
+      <GetProposal/>
     </div>
   )
 }

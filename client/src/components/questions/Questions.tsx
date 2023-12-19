@@ -29,7 +29,7 @@ const Questions = (): React.ReactElement => {
     };
 
     return (
-        <div className='flex flex-col gap-5'>
+        <div className='flex flex-col gap-5 mt-10'>
             <div className='h-[175px] items-center justify-center flex flex-col gap-[30px]'>
                 <h2 className='flex flex-col items-center justify-center w-[226px] h-[97px]'>
                     <span className='w-[226px]  h-[46px] rounded-[7px] pr-[7px] pl-[7px] text-center text-[36px] lead-[45.94px] bg-[#B9FF66] gap-[]'>Preguntas</span>
@@ -44,7 +44,7 @@ const Questions = (): React.ReactElement => {
                         <div
                             className='h-[100px] rounded-[45px] border border-b-4 border-black border-solid flex flex-row items-center justify-around bg-[#F3F3F3]'
                         >
-                            <p className='text-[30px]'>{index}</p>
+                            <p className='text-[30px] font-medium'>0{index + 1}</p>
                             <p className='lead-[22.97px] text-center text-[12px] w-[150px] min-[500px]:w-[300px]'>{quest.question}</p>
                             <p
                                 onClick={() => AnswerVisibility(index)}

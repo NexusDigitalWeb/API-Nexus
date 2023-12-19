@@ -10,7 +10,7 @@ const Navbar = (): React.ReactElement => {
   const handleClick = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <div className='h-[100px] w-[100%]'>
+    <div className='h-[100px] w-[100%]' id="home">
       <div className='flex justify-between pr-4 pl-4 h-full'>
       <Link href='/' className='h-full flex items-center'>
         <p className='text-2xl font-extrabold'>Nexus.</p>
