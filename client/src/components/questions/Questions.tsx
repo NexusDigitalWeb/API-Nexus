@@ -106,7 +106,7 @@ const Questions = (): React.ReactElement => {
             </div>
 
             <div
-              className={`h-[120px] rounded-[50px] text-center border-black border-solid flex flex-row items-center justify-around bg-[#B9FF66] transition-all duration-200 ease-in
+              className={`h-[full] rounded-[50px] text-center border-black border-solid flex flex-row items-center justify-around bg-[#B9FF66] transition-all duration-200 ease-in
                  ${
                   visibleAnswers[index]?.isVisible &&
                   openQuestionIndex === index

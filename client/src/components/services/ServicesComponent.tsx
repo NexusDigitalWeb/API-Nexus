@@ -1,12 +1,12 @@
 "use client";
-import getServices from "@/utils/servicesRequest";
+import { getServices } from "@/utils/servicesRequest";
 import anime from "animejs";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Waypoint } from "react-waypoint";
 
-interface Services {
+export interface Services {
   _id: string;
   title: string;
   description: string;
