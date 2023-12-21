@@ -19,7 +19,9 @@ const BookingsButton = (): React.ReactElement => {
     setInputValue(e.target.value);
 
   const handleInputBlur = async () => {
-    if (isValidEmail(inputValue)) {
+    if (inputValue === '') {
+      setIsInputVisible(false);
+    } else { if (isValidEmail(inputValue)) {
       const moreInfo = await getMoreInfo(inputValue);
       if (moreInfo.status === 0) {
         setInputValue("");
@@ -36,7 +38,8 @@ const BookingsButton = (): React.ReactElement => {
       setTimeout(() => {
         setEmailAlert("");
       }, 3000);
-    }
+    }}
+   
   };
 
   const handleKeyDown = async (e: React.KeyboardEvent<HTMLInputElement>) => {
