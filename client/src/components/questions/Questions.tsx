@@ -11,25 +11,43 @@ interface response {
 const Questions = (): React.ReactElement => {
     const [questionsList, setQuestionList] = useState<Array<questInterface>>([]);
     const [visibleAnswers, setVisibleAnswers] = useState<{ [key: number]: response }>({});
+    const [openQuestionIndex, setOpenQuestionIndex] = useState<number | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
-            const quests = await getQuestions()
-            setQuestionList(quests.question)
-        }
+            const quests = await getQuestions();
+            setQuestionList(quests.question);
+        };
         fetchData();
-    }, [])
+    }, []);
 
     const AnswerVisibility = (i: number) => {
+        setOpenQuestionIndex((prevIndex) => (prevIndex === i ? null : i));
         setVisibleAnswers((prevVisibleAnswers) => {
-            const updatedVisibleAnswers = { ...prevVisibleAnswers };
-            updatedVisibleAnswers[i] = { ...questionsList[i], isVisible: !prevVisibleAnswers[i]?.isVisible };
+            const updatedVisibleAnswers: { [key: number]: response } = {};
+
+            // Cerrar automáticamente respuestas 
+            Object.keys(prevVisibleAnswers).forEach((indexStr) => {
+                const indexToClose = parseInt(indexStr, 10);
+                updatedVisibleAnswers[indexToClose] = {
+                    ...prevVisibleAnswers[indexToClose],
+                    isVisible: false
+                };
+            });
+
+            // Abro la nueva pregunta si no estaba abierta y la cierro si ya estaba abierta
+            updatedVisibleAnswers[i] = {
+                ...questionsList[i],
+                isVisible: !prevVisibleAnswers[i]?.isVisible
+            };
+
             return updatedVisibleAnswers;
         });
     };
 
+
     return (
-        <div className='flex flex-col gap-5 mt-10'>
+        <div className='flex flex-col gap-5'>
             <div className='h-[175px] items-center justify-center flex flex-col gap-[30px]'>
                 <h2 className='flex flex-col items-center justify-center w-[226px] h-[97px]'>
                     <span className='w-[226px]  h-[46px] rounded-[7px] pr-[7px] pl-[7px] text-center text-[36px] lead-[45.94px] bg-[#B9FF66] gap-[]'>Preguntas</span>
@@ -38,7 +56,7 @@ const Questions = (): React.ReactElement => {
                 <p className='text-[16px] lead-[24px] text-center p-1'>Verifica las preguntas frecuentes para sacar tus dudas</p>
             </div>
 
-            <div className=' h-[712px] p-2 flex flex-col gap-3'>
+            <div className='p-2 flex flex-col gap-3'>
                 {questionsList.map((quest, index) => (
                     <div key={quest._id}>
                         <div
@@ -54,7 +72,7 @@ const Questions = (): React.ReactElement => {
 
                         <div
                             className={`h-[120px] rounded-[50px] text-center border-black border-solid flex flex-row items-center justify-around bg-[#B9FF66] 
-                ${visibleAnswers[index]?.isVisible ? 'block' : 'hidden'}`}
+                ${visibleAnswers[index]?.isVisible && openQuestionIndex === index ? 'block' : 'hidden'}`}
                         >
                             <p className='text-[12px] w-[250px]  '>
                                 {visibleAnswers[index]?.response}
