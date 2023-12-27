@@ -66,14 +66,14 @@ const Questions = (): React.ReactElement => {
     <div className="flex flex-col gap-5 mt-14">
       <div className="h-[175px] items-center justify-center flex flex-col gap-[30px] relative left-[1000px] title-animation">
         <h2 className="flex flex-col items-center justify-center w-[226px] h-[97px]">
-          <span className="w-[226px]  h-[46px] rounded-[7px] pr-[7px] pl-[7px] text-center text-[36px] lead-[45.94px] bg-[#B9FF66] gap-[]">
+          <span className="w-[226px] md:w-[326px]  h-[46px] md:h-[66px] rounded-[7px] pr-[7px] pl-[7px] text-center text-[36px] md:text-[46px] lead-[45.94px] bg-[#B9FF66] gap-[]">
             Preguntas
           </span>
-          <span className="w-[240px] h-[51px] rounded-[7px] pr-[7px] pl-[7px] text-center text-[40px] lead-[51.04px] gap-[10px] bg-[#B9FF66]">
+          <span className="w-[240px] md:w-[280px] h-[51px] md:h-[61px] rounded-[7px] pr-[7px] pl-[7px] text-center text-[40px] lead-[51.04px] gap-[10px] bg-[#B9FF66]">
             Frecuentes
           </span>
         </h2>
-        <p className="text-[16px] lead-[24px] text-center p-1">
+        <p className="text-[16px] md:text-[18px] lead-[24px] text-center p-1">
           Verifica las preguntas frecuentes para sacar tus dudas
         </p>
         <Waypoint onEnter={() => handleWaypointToRight(".title-animation")} />
@@ -93,13 +93,13 @@ const Questions = (): React.ReactElement => {
             <div
               className={`h-[100px] rounded-[45px] border border-b-4 border-black border-solid flex flex-row items-center justify-around bg-[#F3F3F3]`}
             >
-              <p className="text-[30px] font-medium">0{index + 1}</p>
-              <p className="lead-[22.97px] text-center text-[12px] w-[150px] min-[500px]:w-[300px]">
+              <p className="text-[30px] md:text-[40px] font-medium">0{index + 1}</p>
+              <p className="text-center text-[12px] sm:text-[15px] md:text-[18px]  w-[150px] sm:w-[400px] md:w-[450px] min-[500px]:w-[300px]">
                 {quest.question}
               </p>
               <p
                 onClick={() => AnswerVisibility(index)}
-                className="border border-black rounded-[100%] w-[30px] h-[30px] text-[20px] flex items-center justify-center cursor-pointer"
+                className="border border-black rounded-[100%] w-[30px] h-[30px] md:w-[40px] md:h-[40px] text-[20px] flex items-center justify-center cursor-pointer"
               >
                 {isClicked && openQuestionIndex === index ? "-" : "+"}
               </p>
@@ -114,7 +114,7 @@ const Questions = (): React.ReactElement => {
                     : "h-0"
                 }`}
             >
-              <p className="text-[12px] w-[250px] transition-all ease-in duration-150">
+              <p className="text-[12px] sm:text-[16px] md:text-[18px] w-[250px] sm:w-[420px] md:w-[580px] transition-all ease-in duration-150">
                 {visibleAnswers[index]?.isVisible
                   ? visibleAnswers[index].response
                   : ""}
