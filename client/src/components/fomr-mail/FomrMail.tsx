@@ -26,7 +26,7 @@ const FomrMail = (): React.ReactElement => {
     };
 
     return (
-        <div className='flex flex-col items-center bg-[#191A23] px-[20px] pt-[50px] pb-[30px] gap-[37px]'>
+        <div className='flex flex-col items-center bg-[#191A23] px-[20px] pt-[50px] pb-[30px] gap-[37px]' id='contactUs'>
             <div className='flex flex-col items-center gap-3'>
                 <Link href='/' className='h-full text-white  flex items-center'>
                     <p className='text-3xl font-extrabold'>Nexus.</p>
