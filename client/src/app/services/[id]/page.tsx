@@ -1,6 +1,7 @@
 "use client";
 import Loader from "@/components/Loaders/Loader";
 import Navbar from "@/components/Navbar/Navbar";
+import ServiceInfoNavbar from "@/components/Navbar/ServiceInfoNavbar";
 import BookingsButton from "@/components/buttons/BookingsButton";
 import { Services } from "@/components/services/ServicesComponent";
 import { getServiceById } from "@/utils/servicesRequest";
@@ -49,7 +50,7 @@ const ServicePage = () => {
             <Waypoint
               onEnter={() => handleWaypointToRight(".animation-navbar", 1500)}
             />
-            <Navbar />
+            <ServiceInfoNavbar />
           </div>
 
           <div className="h-full w-full">
