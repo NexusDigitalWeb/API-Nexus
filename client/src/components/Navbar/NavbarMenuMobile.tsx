@@ -31,7 +31,7 @@ const NavbarMenuMobile = ({ open, set }: { open: boolean, set: Dispatch<SetState
 
   return (
     <div className={`transition-all duration-300 ease-in fixed top-0 left-0 h-screen w-screen flex justify-center bg-[#f2efef] transform ${open ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
-        <ul className='flex flex-col justify-center items-center gap-10 text-xl'>
+        <ul className='flex flex-col justify-center items-center gap-10 text-xl tablet:text-2xl'>
             <Link href='#servicesPage' onClick={() => set(false)}>Servicios</Link>
             <Link href='#frequentQuestions' onClick={() => set(false)}>Preguntas frecuentes</Link>
             <Link href='#contactUs' onClick={() => set(false)}>Contáctanos</Link>

@@ -6,7 +6,7 @@ const BookingsButton = (): React.ReactElement => {
   const [isInputVisible, setIsInputVisible] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>("");
   const [emailAlert, setEmailAlert] = useState<string>("");
-  const [emailStatus, setEmailStatus] = useState<string>('');
+  const [emailStatus, setEmailStatus] = useState<string>("");
 
   const isValidEmail = (email: string): boolean => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -23,12 +23,12 @@ const BookingsButton = (): React.ReactElement => {
       setIsInputVisible(false);
     } else {
       if (isValidEmail(inputValue)) {
-        setEmailStatus('Enviando...');
+        setEmailStatus("Enviando...");
         const moreInfo = await getMoreInfo(inputValue);
         if (moreInfo.status === 0) {
           setInputValue("");
           setEmailAlert("Email enviado.");
-          setEmailStatus('');
+          setEmailStatus("");
           setIsInputVisible(false);
           setTimeout(() => {
             setEmailAlert("");
@@ -61,17 +61,21 @@ const BookingsButton = (): React.ReactElement => {
           onKeyDown={handleKeyDown}
           autoFocus
           placeholder="Email"
-          className="w-[280px] h-[68px] p-4 flex items-center justify-center rounded-[14px] outline-none text-white text-lg bg-[#191A23] placeholder:text-center"
+          className="w-[280px] h-[68px] p-4 flex items-center justify-center rounded-[14px] outline-none text-white text-lg bg-[#191A23] placeholder:text-center tablet:w-[300px] tablet:h-[75px] tablet:text-lg"
         />
       ) : (
         <button
           onClick={handleClick}
-          className="w-[280px] h-[68px] flex items-center justify-center rounded-[14px] text-center text-white bg-[#191A23] transition-all ease-in duration-150"
+          className="w-[280px] h-[68px] flex items-center justify-center rounded-[14px] text-center text-white bg-[#191A23] transition-all ease-in duration-150 tablet:w-[300px] tablet:h-[75px] tablet:text-lg"
         >
           Obten más información
         </button>
       )}
-      <div className={`text-left ml-2 mt-2 ${emailStatus !== '' ? 'animate-pulse' : '' }`}>
+      <div
+        className={`text-left ml-2 mt-2 ${
+          emailStatus !== "" ? "animate-pulse" : ""
+        }`}
+      >
         <span
           className={
             emailAlert === "Email incorrecto."
@@ -79,7 +83,7 @@ const BookingsButton = (): React.ReactElement => {
               : "text-green-500 font-bold"
           }
         >
-          {emailStatus ? emailStatus : ''}
+          {emailStatus ? emailStatus : ""}
           {emailAlert === "Email incorrecto." ? emailAlert : emailAlert}
         </span>
       </div>
