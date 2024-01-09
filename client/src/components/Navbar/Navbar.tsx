@@ -16,12 +16,12 @@ const Navbar = (): React.ReactElement => {
           <p className="text-2xl font-extrabold tablet:text-3xl">Nexus.</p>
         </Link>
 
-        <button onClick={handleClick}>
+        <button className="w-[20px]" onClick={handleClick}>
           <Image
             src="https://res.cloudinary.com/dcvvyhf8p/image/upload/v1702579474/Principal%20web%20Nexus/hbzjkxegujijaeii7ely.png"
             alt="burger-menu-icon"
-            width={20}
-            height={20}
+            width={100}
+            height={100}
             layout="responsive"
           />
         </button>

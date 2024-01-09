@@ -19,11 +19,11 @@ const ServicesPage = (): React.ReactElement => {
   return (
     <div className='h-full w-full mt-10' id='servicesPage'>
       <div className='flex flex-col justify-center items-center relative left-[1000px] animation-waypoint'>
-        <div className='bg-[#B9FF66] w-[60%] rounded-[10px] mt-3'>
+        <div className='bg-[#B9FF66] w-[60%] rounded-[10px] mt-3 tablet:p-2'>
           <h2 className='text-[36px] text-center font-bold'>Servicios</h2>
         </div>
 
-        <p className='mt-5 p-4 text-center'>Como agencia digital, optimizamos tu expansión en línea con soluciones profesionales.</p>
+        <p className='mt-5 p-4 text-center tablet:text-lg'>Como agencia digital, optimizamos tu expansión en línea con soluciones profesionales.</p>
       </div>
       <Waypoint onEnter={() => handleWaypointToLeft('.animation-waypoint')}/>
       <ServicesComponent/>

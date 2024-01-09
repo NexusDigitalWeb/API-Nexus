@@ -5,7 +5,7 @@ const GetProposalButton = () => {
   return (
     <Link
       href="#home"
-      className="w-[100%] h-[68px] mt-5 flex items-center justify-center rounded-[14px] text-center text-white bg-[#191A23]"
+      className="w-[100%] h-[68px] mt-5 flex items-center justify-center rounded-[14px] text-center text-white bg-[#191A23] tablet:mt-7 tablet:text-lg"
     >
       Obtén más información
     </Link>

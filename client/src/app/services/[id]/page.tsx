@@ -55,7 +55,7 @@ const ServicePage = () => {
 
           <div className="h-full w-full">
             <div className="h-full w-full flex flex-col items-center ">
-              <h2 className="text-2xl w-full font-bold p-2 text-center bg-[#B9FF66] shadow relative right-[1000px] animation-window-title">
+              <h2 className="text-2xl w-full font-bold p-2 text-center bg-[#B9FF66] shadow relative right-[1000px] animation-window-title tablet:p-5 tablet:text-3xl">
                 {serviceInfo.title}.
               </h2>
               <Waypoint
@@ -63,7 +63,7 @@ const ServicePage = () => {
                   handleWaypointToRight(".animation-window-title", 2000)
                 }
               />
-              <p className="mt-10 p-5 relative right-[1000px] animation-window-p">
+              <p className="mt-10 p-5 relative right-[1000px] animation-window-p tablet:text-xl">
                 {serviceInfo?.description}
               </p>
               <Waypoint
@@ -80,12 +80,12 @@ const ServicePage = () => {
                 />
                 <BookingsButton />
                 <Image
-              src="https://res.cloudinary.com/dcvvyhf8p/image/upload/v1702579471/Principal%20web%20Nexus/wojoafrdm4nmoez0mw1k.png"
-              width={200}
-              height={200}
-              alt="logo-nexus"
-              className="opacity-50"
-            />
+                  src="https://res.cloudinary.com/dcvvyhf8p/image/upload/v1702579471/Principal%20web%20Nexus/wojoafrdm4nmoez0mw1k.png"
+                  width={200}
+                  height={200}
+                  alt="logo-nexus"
+                  className="opacity-50"
+                />
               </div>
             </div>
           </div>
