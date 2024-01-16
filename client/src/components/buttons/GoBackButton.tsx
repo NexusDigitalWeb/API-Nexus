@@ -18,7 +18,7 @@ const GoBackButton = (): React.ReactElement => {
         <Link
           href="#home"
           onClick={handleClick}
-          className="button window-animation-button fixed bottom-[10px] right-[1000px] z-10"
+          className="button window-animation-button fixed bottom-[10px] right-[1000px] lg:right-[2000px] z-10"
         >
           <svg
             className="svgIcon"

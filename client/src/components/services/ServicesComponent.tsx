@@ -18,7 +18,7 @@ const handleWaypointToRight = (target: string) => {
   anime({
     targets: target,
     left: 0,
-    duration: 2000,
+    duration: 3000,
     easing: "easeInOutExpo",
   });
 };
@@ -51,12 +51,13 @@ const ServicesComponent = () => {
     <div className="h-full w-full p-2 tablet:flex tablet:flex-col tablet:justify-center tablet:items-center">
       <GoBackButton/>
       <Waypoint onEnter={() => handleWaypointToLeft('.window-animation-button')}/>
+      <div className="flex flex-col xl:flex-row justify-center items-center xl:grid xl:grid-cols-2 xl:grid-rows-2 xl:gap-x-20 xl:justify-items-center gap-5 lg:p-4">
       {isLoading
         ? services.map((_, index = 5) => <CardsLoader key={index} />)
         : services?.map((item) => (
             <div
               key={item._id}
-              className={`flex flex-col justify-center tablet:justify-evenly items-start tablet:items-center p-7 tablet:p-6 h-full w-full mb-10 border-[#191A23] border-b-4 border rounded-[20px] relative right-[1000px] tablet:h-[320px] tablet:w-[90%] window-animation-${item.title.replace(
+              className={`flex flex-col justify-center tablet:justify-evenly items-start tablet:items-center p-7 tablet:p-6 h-full w-full mb-10 border-[#191A23] border-b-4 border rounded-[20px] relative right-[1000px] lg:right-[2000px] tablet:h-[300px] tablet:w-[90%] lg:w-[600px] lg:h-full lg:items-start window-animation-${item.title.replace(
                 /\s/g,
                 ""
               )}`}
@@ -68,11 +69,11 @@ const ServicesComponent = () => {
                   )
                 }
               />
-              <h3 className="font-bold text-[26px] text-center bg-[#B9FF66] rounded-[20px] border-[#191A23] border-b-2 mb-5 tablet:mb-10 tablet:p-2">
+              <h3 className="font-bold text-[26px] text-center bg-[#B9FF66] rounded-[20px] border-[#191A23] border-b-2 mb-5 tablet:mb-10 tablet:p-2 xl:p-4 xl:text-left">
                 {item.title}
               </h3>
               <div className="flex justify-between items-end w-full tablet:w-[90%]">
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 xl:flex-row">
                 <Link href={`/services/${item._id}`}>
                   <Image
                     src={
@@ -82,12 +83,12 @@ const ServicesComponent = () => {
                     width={250}
                     height={250}
                     className="w-auto h-auto"
-                    layout="responsive"
+                    
                   />
                 </Link>
-                <p className="hidden tablet:flex">Más info.</p>
+                <p className="hidden tablet:flex tablet-md:text-lg">Más info.</p>
                 </div>
-                <div className="w-auto h-auto">
+                <div className="mt-4 w-[125px] h-[120px] tablet::w-[180px] tablet::h-[160px] xl:w-[200px] xl:h-[192px]">
                 <Image
                   src={item.photo}
                   width={100}
@@ -101,6 +102,8 @@ const ServicesComponent = () => {
               </div>
             </div>
           ))}
+      </div>
+      
     </div>
   );
 };
