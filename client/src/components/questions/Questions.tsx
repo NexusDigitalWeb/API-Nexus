@@ -63,19 +63,22 @@ const Questions = (): React.ReactElement => {
   };
 
   return (
-    <div className="flex flex-col gap-5 mt-14" id="frequentQuestions">
-      <div className="h-[175px] items-center justify-center flex flex-col gap-[30px] relative left-[1000px] title-animation">
-        <h2 className="flex flex-col items-center justify-center w-[226px] h-[97px]">
-          <span className="w-[226px] md:w-[326px] lg:w-[426px] 2xl:w-[526px] h-[46px] md:h-[66px] lg:h-[86px] 2xl:h-[106px] rounded-[7px] pr-[7px] pl-[7px] text-center text-[36px] md:text-[46px] lg:text-[56px] 2xl:text-[66px] lead-[45.94px] bg-[#B9FF66] gap-[]">
-            Preguntas
-          </span>
-          <span className="w-[240px] md:w-[280px] lg:w-[320px] 2xl:w-[420px] h-[51px] md:h-[61px] lg:h-[71px] 2xl:h-[81px] rounded-[7px] pr-[7px] pl-[7px] text-center text-[40px] lg:text-[45px] 2xl:text-[50px] lead-[51.04px] gap-[10px] bg-[#B9FF66] mb-10">
-            Frecuentes
-          </span>
-        </h2>
-        <p className="text-[16px] md:text-[18px] lg:text-[26px] lead-[24px] text-center p-1">
-          Verifica las preguntas frecuentes para sacar tus dudas
-        </p>
+    <div className="flex flex-col gap-5 2xl:gap-[60px] mt-14" id="frequentQuestions">
+      <div className="relative left-[1000px] title-animation">
+        <div className="h-[175px] items-center justify-center flex flex-col xl:flex-row gap-[30px] xl:gap-[150px] xl:pr-[250px] 2xl:pr-[400px]">
+          <h2 className="flex flex-col xl:flex-row items-center justify-center w-[226px] h-[97px]">
+            <span className="w-[226px] md:w-[326px] lg:w-[426px] 2xl:w-[526px] h-[46px] md:h-[66px] lg:h-[71px] rounded-[7px] xl:rounded-l-[7px] xl:rounded-none pr-[7px] pl-[7px] text-center text-[36px] lg:text-[40px] lead-[45.94px] bg-[#B9FF66] gap-[]">
+              Preguntas
+            </span>
+            <span className="w-[240px] md:w-[280px] lg:w-[320px] 2xl:w-[526px] h-[51px] md:h-[61px] lg:h-[71px] xl:rounded-r-[7px] xl:rounded-none rounded-[7px] pr-[7px] pl-[7px] text-center text-[40px] lg:text-[44px] xl:text-[40px] lead-[51.04px] gap-[10px] bg-[#B9FF66] mb-10 xl:mb-0">
+              Frecuentes
+            </span>
+          </h2>
+          <p className="text-[16px] md:text-[18px] lg:text-[26px] xl:text-lg 2xl:text-[1.2rem] lead-[24px] text-center p-1 xl:w-[300px] 2xl:w-[350px]">
+            Verifica las Preguntas Frecuentes para Sacar tus Dudas
+          </p>
+        </div>
+
         <Waypoint onEnter={() => handleWaypointToRight(".title-animation")} />
       </div>
 
