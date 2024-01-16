@@ -64,7 +64,7 @@ const Questions = (): React.ReactElement => {
 
   return (
     <div className="flex flex-col gap-5 2xl:gap-[60px] mt-14" id="frequentQuestions">
-      <div className="relative left-[1000px] title-animation">
+      <div className="relative left-[2000px] title-animation">
         <div className="h-[175px] items-center justify-center flex flex-col xl:flex-row gap-[30px] xl:gap-[150px] xl:pr-[250px] 2xl:pr-[400px]">
           <h2 className="flex flex-col xl:flex-row items-center justify-center w-[226px] h-[97px]">
             <span className="w-[226px] md:w-[326px] lg:w-[426px] 2xl:w-[526px] h-[46px] md:h-[66px] lg:h-[71px] rounded-[7px] xl:rounded-l-[7px] xl:rounded-none pr-[7px] pl-[7px] text-center text-[36px] lg:text-[40px] lead-[45.94px] bg-[#B9FF66] gap-[]">

@@ -46,7 +46,7 @@ const ServicePage = () => {
         <Loader />
       ) : (
         <div className="">
-          <div className="relative z-10 right-[1000px] animation-navbar bg-[#F3F3F3]">
+          <div className="relative z-10 right-[2000px] animation-navbar bg-[#F3F3F3]">
             <Waypoint
               onEnter={() => handleWaypointToRight(".animation-navbar", 1500)}
             />
@@ -55,7 +55,7 @@ const ServicePage = () => {
 
           <div className="h-full w-full">
             <div className="h-full w-full flex flex-col items-center ">
-              <h2 className="text-2xl w-full font-bold p-2 text-center bg-[#B9FF66] shadow relative right-[1000px] animation-window-title tablet:p-5 tablet:text-3xl">
+              <h2 className="text-2xl w-full font-bold p-2 text-center bg-[#B9FF66] shadow relative right-[2000px] animation-window-title tablet:p-5 tablet:text-3xl">
                 {serviceInfo.title}.
               </h2>
               <Waypoint
@@ -63,7 +63,7 @@ const ServicePage = () => {
                   handleWaypointToRight(".animation-window-title", 2000)
                 }
               />
-              <p className="mt-10 p-5 relative right-[1000px] animation-window-p tablet:text-xl">
+              <p className="mt-10 p-5 relative right-[2000px] animation-window-p tablet:text-xl">
                 {serviceInfo?.description}
               </p>
               <Waypoint
@@ -72,7 +72,7 @@ const ServicePage = () => {
                 }
               />
 
-              <div className="w-full p-5 flex flex-col items-center relative right-[1000px] animation-window-button mt-10">
+              <div className="w-full p-5 flex flex-col items-center relative right-[2000px] animation-window-button mt-10">
                 <Waypoint
                   onEnter={() =>
                     handleWaypointToRight(".animation-window-button", 3000)
