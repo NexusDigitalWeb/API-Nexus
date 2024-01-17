@@ -73,7 +73,7 @@ const FomrMail = (): React.ReactElement => {
           </div>
 
           <form
-            className="h-[216px] xl:h-[200px] w-[100%] xl:max-w-[650px] max-w-[500px] items-center justify-center flex gap-[22px] flex-col xl:flex-row p-[20px] bg-[#292A32] rounded-[14px]"
+            className="h-[216px] xl:h-[200px] w-[100%] max-w-[500px] xl:max-w-[650px] items-center justify-center flex gap-[22px] flex-col xl:flex-row p-[20px] bg-[#292A32] rounded-[14px]"
             onSubmit={handleSubmit}
           >
             <input
@@ -85,7 +85,7 @@ const FomrMail = (): React.ReactElement => {
             />
 
             <button
-              className="rounded-[14px] h-[68px] bg-[#B9FF66] px-[35px] py-[20px] w-full xl:w-[200px] md:text-[20px]"
+              className="rounded-[14px] h-[68px] xl:h-[75px] flex items-center justify-center bg-[#B9FF66] px-[35px] py-[20px] w-full xl:w-[200px] md:text-[20px]"
               type="submit"
             >
               <p className={`${sendingEmail ? "animate-pulse" : ""}`}>
