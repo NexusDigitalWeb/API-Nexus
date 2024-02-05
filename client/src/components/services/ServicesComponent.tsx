@@ -57,7 +57,7 @@ const ServicesComponent = () => {
         : services?.map((item) => (
             <div
               key={item._id}
-              className={`flex flex-col justify-center tablet:justify-evenly items-start tablet:items-center p-7 tablet:p-6 h-full w-full mb-10 border-[#191A23] border-b-4 border rounded-[20px] relative right-[1000px] lg:right-[2000px] tablet:h-[300px] tablet:w-[90%] lg:w-[600px] lg:h-full lg:items-start window-animation-${item.title.replace(
+              className={`flex flex-col justify-center tablet:justify-evenly items-start tablet:items-center p-7 tablet:p-6 h-full w-full mb-10 border-[#191A23] border-b-4 border rounded-[20px] relative right-[1000px] lg:right-[2000px] tablet:h-[300px] tablet:w-[90%] lg:w-[600px] lg:h-full lg:items-start 2xl:w-[750px] window-animation-${item.title.replace(
                 /\s/g,
                 ""
               )}`}

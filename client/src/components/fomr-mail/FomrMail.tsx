@@ -65,7 +65,7 @@ const FomrMail = (): React.ReactElement => {
             </h4>
             <div className="text-[13px] md:text-[15px] xl:text-[18px] text-white flex flex-col items-center lg:items-start gap-[15px]">
               <p>Email: nexusdigitalcontact@gmail.com</p>
-              <p>Tel: +54 3329-528349</p>
+              <p>Tel: +54 3329-684724</p>
               <p className="text-[14px] md:text-[18px] xl:text-[20px] 2xl:text-[22px] text-center p-1">
                 ¡Dejanos tu email para recibir mas información!
               </p>

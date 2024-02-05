@@ -16,7 +16,7 @@ const GetProposal = () => {
   };
   return (
     <div className="h-full w-full p-[15px] tablet:p-8 flex justify-center">
-      <div className="bg-[#F3F3F3] max-w-[1300px] shadow w-full h-full rounded-[30px] flex flex-col justify-center items-center xl:grid xl:grid-cols-2 xl:justify-items-end p-5 relative left-[1000px] lg:left-[2000px] animation-button tablet:p-6 xl:px-4">
+      <div className="bg-[#F3F3F3] max-w-[1300px] shadow w-full h-full rounded-[30px] flex flex-col justify-center items-center xl:grid xl:grid-cols-2 xl:justify-items-end p-5 relative left-[1000px] lg:left-[2000px] animation-button tablet:p-6 xl:pl-[60px]">
         <div className="xl:order-2">
           <div className="hidden xl:flex justify-end items-end h-[348px] w-[494px]">
             <Image
@@ -38,7 +38,7 @@ const GetProposal = () => {
             ¡Contáctanos hoy mismo para descubrir cómo nuestra agencia puede
             ayudarte en tu negocio!
           </p>
-          <div className="mt-8 xl:mt-[3rem]">
+          <div className="mt-8 xl:mt-[3rem] flex justify-center">
             <BookingsButton />
           </div>
         </div>
