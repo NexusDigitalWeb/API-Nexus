@@ -1,6 +1,6 @@
 export const getServices = async () => {
     try {
-        const response = await fetch('https://nexus-qh2b.onrender.com/services');
+        const response = await fetch('https://nexusdigitalservices.fly.dev/services');
         const data = await response.json();
 
         if (response.status === 404) return data.error.message;
@@ -12,7 +12,7 @@ export const getServices = async () => {
 
 export const getServiceById = async (id: string | string[]) => {
     try {
-        const response = await fetch(`https://nexus-qh2b.onrender.com/services/${id}`);
+        const response = await fetch(`https://nexusdigitalservices.fly.dev/services/${id}`);
         const data = await response.json();
         
         if (response.status === 404) return data.error.message;
