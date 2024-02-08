@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className='scroll-smooth'>
+    <html lang="es" className='scroll-smooth overflow-x-hidden'>
       <body className={`${spaceGrotesk.className} bg-[#ffffff] overflow-x-hidden flex flex-col gap-[20px]`}>{children}</body>
     </html>
   )
