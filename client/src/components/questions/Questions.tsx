@@ -32,7 +32,7 @@ const Questions = (): React.ReactElement => {
     anime({
       targets: target,
       left: 0,
-      duration: 3000,
+      duration: 1500,
       easing: "easeInOutExpo",
     });
   };

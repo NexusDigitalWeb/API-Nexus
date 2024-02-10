@@ -10,12 +10,13 @@ const GetProposal = () => {
     anime({
       targets: target,
       left: 0,
-      duration: 2000,
+      duration: 1500,
       easing: "easeInOutExpo",
     });
   };
   return (
     <div className="h-full w-full p-[15px] tablet:p-8 flex justify-center">
+      <Waypoint onEnter={() => handleWaypointToLeft(".animation-button")} />
       <div className="bg-[#F3F3F3] max-w-[1300px] shadow w-full h-full rounded-[30px] flex flex-col justify-center items-center xl:grid xl:grid-cols-2 xl:justify-items-end p-5 relative left-[1000px] lg:left-[2000px] animation-button tablet:p-6 xl:pl-[60px]">
         <div className="xl:order-2">
           <div className="hidden xl:flex justify-end items-end h-[348px] w-[494px]">
@@ -44,7 +45,7 @@ const GetProposal = () => {
         </div>
       </div>
 
-      <Waypoint onEnter={() => handleWaypointToLeft(".animation-button")} />
+      
     </div>
   );
 };

@@ -98,7 +98,7 @@ const FomrMail = (): React.ReactElement => {
         </div>
         <div className="w-full items-center justify-center lg:justify-start flex gap-[20px]">
           <Link
-            href="/"
+            href="https://www.linkedin.com/company/nexus-digital-services"
             className="flex items-center justify-center bg-white rounded-[50%] h-[30px] w-[30px] md:h-[40px] md:w-[40px] xl:h-[50px] xl:w-[50px] "
           >
             <Image
@@ -110,27 +110,27 @@ const FomrMail = (): React.ReactElement => {
             />
           </Link>
           <Link
-            href="/"
+            href="https://www.instagram.com/nexusdigital.ar/"
             className="flex items-center justify-center bg-white rounded-[50%] h-[30px] w-[30px] md:h-[40px] md:w-[40px] xl:h-[50px] xl:w-[50px]"
           >
             <Image
               src="https://res.cloudinary.com/dcvvyhf8p/image/upload/v1703128780/Principal%20web%20Nexus/insta2_dlawkn.png"
-              alt="linkedin-image"
+              alt="instagram-image"
               width={25}
               height={25}
               className="xl:w-[30px] xl:h-[30px] "
             />
           </Link>
           <Link
-            href="/"
+            href="https://www.facebook.com/profile.php?id=100079788576676"
             className="flex items-center justify-center bg-white rounded-[50%] h-[30px] w-[30px] md:h-[40px] md:w-[40px] xl:h-[50px] xl:w-[50px]"
           >
             <Image
-              src="https://res.cloudinary.com/dcvvyhf8p/image/upload/v1703111300/Principal%20web%20Nexus/twitter_kvec7o.png"
-              alt="linkedin-image"
+              src="https://res.cloudinary.com/dcvvyhf8p/image/upload/v1707545684/Principal%20web%20Nexus/623dd7d270712bdafc63c38a_vntovf.png"
+              alt="facebook-image"
               width={17.6}
               height={14.4}
-              className="xl:w-[25px] xl:h-[25px] "
+              className="xl:w-[35px] xl:h-[35px] "
             />
           </Link>
         </div>
