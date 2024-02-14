@@ -89,9 +89,9 @@ const Questions = (): React.ReactElement => {
 
       <div className="p-2 flex flex-col items-center gap-3">
         {questionsList.map((quest, index) => (
-          <>
+          <div key={quest._id}>
             <div
-              key={quest._id}
+              
               className={`relative w-full flex flex-col items-center left-[2000px] animation-window-${index}`}
             >
               <div className="hidden lg:flex">
@@ -133,7 +133,7 @@ const Questions = (): React.ReactElement => {
                   : ""}
               </p>
             </div>
-          </>
+          </div>
         ))}
       </div>
     </div>

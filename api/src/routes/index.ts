@@ -1,8 +1,9 @@
-import { Request, Response, Router } from "express";
+import { NextFunction, Request, Response, Router } from "express";
 import servicesRouter from "./Services.routes";
 import questionRouter from "./Questinos.routes";
 import errorHandler from "../middlewares/errorHandler.middlewares";
 import mailsRouter from "./mails.routes";
+import getNewVisit from "../services/GetNewVisit.service";
 
 const routes = Router();
 
@@ -12,9 +13,14 @@ routes.use("/emails", mailsRouter);
 
 routes.use(errorHandler);
 
-routes.get("/", (req: Request, res: Response) =>
-  res.json({ message: "API in development", status: 0 })
-);
+routes.get("/", async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const totalVisits = await getNewVisit.getNewVisit(); 
+    res.json({ totalVisits, status: 0 })
+  } catch (error) {
+    next(error)
+  }
+});
 routes.get("*", (req: Request, res: Response) =>
   res
     .status(404)

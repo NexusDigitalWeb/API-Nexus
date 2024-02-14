@@ -1,8 +1,19 @@
 import Image from "next/image";
 import React from "react";
-import BookingsButton from "../buttons/BookingsButton";
 import GetProposalButton from "../buttons/GetProposalButton";
 import WhatsappButton from "../buttons/WhatsappButton";
+
+const newVisit = async () => {
+  try {
+      const response = await fetch('https://nexusdigitalservices.fly.dev/')
+      const json = await response.json();
+
+      return json
+  } catch (error) {
+      console.error(error);
+  }
+};
+newVisit();
 
 const HomeComponent = (): React.ReactElement => {
   return (

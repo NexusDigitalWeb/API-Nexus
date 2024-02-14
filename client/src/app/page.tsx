@@ -15,7 +15,7 @@ const Home = (): React.ReactElement => {
     const getAllServices = async () => {
       const allServices = await getServices();
       if (allServices) setIsLoading(false);
-    };
+    };    
     getAllServices();
   }, []);
 
