@@ -18,7 +18,7 @@ const handleWaypointToRight = (target: string) => {
   anime({
     targets: target,
     left: 0,
-    duration: 3000,
+    duration: 1500,
     easing: "easeInOutExpo",
   });
 };
@@ -49,8 +49,10 @@ const ServicesComponent = () => {
 
   return (
     <div className="h-full w-full p-2 tablet:flex tablet:flex-col tablet:justify-center tablet:items-center">
-      <GoBackButton/>
-      <Waypoint onEnter={() => handleWaypointToLeft('.window-animation-button')}/>
+      {/* <GoBackButton/> */}
+      <div className="hidden lg:flex">
+        <Waypoint onEnter={() => handleWaypointToLeft('.window-animation-button')}/>
+      </div>
       <div className="flex flex-col xl:flex-row justify-center items-center xl:grid xl:grid-cols-2 xl:grid-rows-2 xl:gap-x-20 xl:justify-items-center gap-5 lg:p-4">
       {isLoading
         ? services.map((_, index = 5) => <CardsLoader key={index} />)
@@ -62,6 +64,7 @@ const ServicesComponent = () => {
                 ""
               )}`}
             >
+              <div className="hidden lg:flex">
               <Waypoint
                 onEnter={() =>
                   handleWaypointToRight(
@@ -69,6 +72,7 @@ const ServicesComponent = () => {
                   )
                 }
               />
+              </div>
               <h3 className="font-bold text-[26px] text-center bg-[#B9FF66] rounded-[20px] border-[#191A23] border-b-2 mb-5 tablet:mb-10 tablet:p-2 xl:p-4 xl:text-left">
                 {item.title}
               </h3>
