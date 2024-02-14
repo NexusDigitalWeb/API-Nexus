@@ -63,7 +63,10 @@ const Questions = (): React.ReactElement => {
   };
 
   return (
-    <div className="flex flex-col gap-5 2xl:gap-[60px] mt-14" id="frequentQuestions">
+    <div
+      className="flex flex-col gap-5 2xl:gap-[60px] mt-14"
+      id="frequentQuestions"
+    >
       <div className="relative left-[2000px] title-animation">
         <div className="h-[175px] items-center justify-center flex flex-col xl:flex-row gap-[30px] xl:gap-[150px] xl:pr-[250px] 2xl:pr-[400px]">
           <h2 className="flex flex-col xl:flex-row items-center justify-center w-[226px] h-[97px]">
@@ -79,7 +82,9 @@ const Questions = (): React.ReactElement => {
           </p>
         </div>
 
-        <Waypoint onEnter={() => handleWaypointToRight(".title-animation")} />
+        <div className="hidden lg:flex">
+          <Waypoint onEnter={() => handleWaypointToRight(".title-animation")} />
+        </div>
       </div>
 
       <div className="p-2 flex flex-col items-center gap-3">
@@ -89,15 +94,19 @@ const Questions = (): React.ReactElement => {
               key={quest._id}
               className={`relative w-full flex flex-col items-center left-[2000px] animation-window-${index}`}
             >
-              <Waypoint
-                onEnter={() =>
-                  handleWaypointToRight(`.animation-window-${index}`)
-                }
-              />
+              <div className="hidden lg:flex">
+                <Waypoint
+                  onEnter={() =>
+                    handleWaypointToRight(`.animation-window-${index}`)
+                  }
+                />
+              </div>
               <div
                 className={`h-[100px] lg:h-[150px] w-full max-w-[1400px] rounded-[45px] border border-b-4 border-black border-solid flex flex-row items-center justify-around bg-[#F3F3F3]`}
               >
-                <p className="text-[30px] md:text-[40px] lg:text-[50px] font-medium">0{index + 1}</p>
+                <p className="text-[30px] md:text-[40px] lg:text-[50px] font-medium">
+                  0{index + 1}
+                </p>
                 <p className="text-center text-[12px] sm:text-[15px] md:text-[18px] lg:text-[20px] 2xl:text-[26px] w-[150px] sm:w-[400px] md:w-[450px] min-[500px]:w-[300px] lg:w-[550px] 2xl:w-[700px]">
                   {quest.question}
                 </p>
@@ -108,16 +117,15 @@ const Questions = (): React.ReactElement => {
                   {isClicked && openQuestionIndex === index ? "-" : "+"}
                 </p>
               </div>
-
-
             </div>
             <div
               className={`h-[full] w-full max-w-[1400px] rounded-[50px] text-center border-black border-solid flex flex-row items-center justify-around bg-[#B9FF66] transition-all duration-200 ease-in
-                 ${visibleAnswers[index]?.isVisible &&
-                  openQuestionIndex === index
-                  ? "flex h-full p-3"
-                  : "h-0"
-                }`}
+                 ${
+                   visibleAnswers[index]?.isVisible &&
+                   openQuestionIndex === index
+                     ? "flex h-full p-3"
+                     : "h-0"
+                 }`}
             >
               <p className="text-[12px] sm:text-[16px] md:text-[18px] lg:text-[20px] 2xl:text-[22px] w-[250px] sm:w-[420px] md:w-[580px] 2xl:w-[800px] lg:w-[660px] transition-all ease-in duration-150">
                 {visibleAnswers[index]?.isVisible
