@@ -41,7 +41,7 @@ const FomrMail = (): React.ReactElement => {
   };
 
   return (
-    <div className="lg:flex lg:justify-center">
+    <footer className="lg:flex lg:justify-center">
       <div
         className="flex w-full flex-col max-w-[1400px] items-center bg-[#191A23] px-[20px] lg:px-[30px] xl:px-[60px] pt-[50px] pb-[30px] gap-[37px] xl:rounded-t-[45px]"
         id="contactUs"
@@ -98,6 +98,7 @@ const FomrMail = (): React.ReactElement => {
         </div>
         <div className="w-full items-center justify-center lg:justify-start flex gap-[20px]">
           <Link
+            target="_blank"
             href="https://www.linkedin.com/company/nexus-digital-services"
             className="flex items-center justify-center bg-white rounded-[50%] h-[30px] w-[30px] md:h-[40px] md:w-[40px] xl:h-[50px] xl:w-[50px] "
           >
@@ -110,6 +111,7 @@ const FomrMail = (): React.ReactElement => {
             />
           </Link>
           <Link
+            target="_blank"
             href="https://www.instagram.com/nexusdigital.ar/"
             className="flex items-center justify-center bg-white rounded-[50%] h-[30px] w-[30px] md:h-[40px] md:w-[40px] xl:h-[50px] xl:w-[50px]"
           >
@@ -122,6 +124,7 @@ const FomrMail = (): React.ReactElement => {
             />
           </Link>
           <Link
+            target="_blank"
             href="https://www.facebook.com/profile.php?id=100079788576676"
             className="flex items-center justify-center bg-white rounded-[50%] h-[30px] w-[30px] md:h-[40px] md:w-[40px] xl:h-[50px] xl:w-[50px]"
           >
@@ -139,7 +142,7 @@ const FomrMail = (): React.ReactElement => {
           <p>@2023 Nexus, Todos Los Derechos Reservados</p>
         </div>
       </div>
-    </div>
+    </footer>
 
   );
 };
