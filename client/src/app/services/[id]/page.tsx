@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import ServiceInfoNavbar from "@/components/Navbar/ServiceInfoNavbar";
 import BookingsButton from "@/components/buttons/BookingsButton";
 import WhatsappButton from "@/components/buttons/WhatsappButton";
+import FomrMail from "@/components/fomr-mail/FomrMail";
 import { Services } from "@/components/services/ServicesComponent";
 import { getServiceById } from "@/utils/servicesRequest";
 import anime from "animejs";
@@ -64,7 +65,7 @@ const ServicePage = () => {
                   handleWaypointToRight(".animation-window-title", 2000)
                 }
               />
-              <p className="mt-10 p-5 relative right-[2000px] animation-window-p tablet:text-xl">
+              <p className="mt-10 p-5 relative right-[2000px] animation-window-p tablet:text-xl tablet-md:w-[80%] lg:w-[60%] lg:text-2xl">
                 {serviceInfo?.description}
               </p>
               <Waypoint
@@ -80,13 +81,13 @@ const ServicePage = () => {
                   }
                 />
                 <BookingsButton />
-                <Image
+                {/* <Image
                   src="https://res.cloudinary.com/dcvvyhf8p/image/upload/v1702579471/Principal%20web%20Nexus/wojoafrdm4nmoez0mw1k.png"
                   width={200}
                   height={200}
                   alt="logo-nexus"
                   className="opacity-50"
-                />
+                /> */}
               </div>
             </div>
           </div>
@@ -94,6 +95,10 @@ const ServicePage = () => {
       )}
       <div className="fixed bottom-[15px] right-[15px] z-10 lg:bottom-[20px] lg:right-[20px] flex items-center gap-5">
       <WhatsappButton/>
+      </div>
+      <Waypoint onEnter={() => handleWaypointToRight('.animation-window-footer', 3500)}/>
+      <div className="animation-window-footer relative right-[2000px]">
+        <FomrMail/>
       </div>
     </>
   );

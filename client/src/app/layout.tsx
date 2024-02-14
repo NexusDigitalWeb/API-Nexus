@@ -9,7 +9,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Nexus: Consultora Digital | Diseño Web, SEO, Marketing y Más",
+  title: "Nexus: Consultora/Agencia Digital | Diseño Web, SEO, Marketing y Más",
   description: "En Nexus, ofrecemos soluciones digitales integrales para potenciar tu presencia en línea. Desde diseño web y SEO hasta marketing digital y gestión de redes sociales, nuestro equipo experto está aquí para ayudarte a destacar en esta nueva era digital",
   keywords: ["Consultora digital", "Diseño web", "SEO", "Migración de bases de datos", "marketing digital", "Redes sociales",
     "Estrategia digital", "Desarrollo web", "Optimización de sitios web", "Gestión de redes sociales", "Estrategias de SEO", "Marketing en línea",
