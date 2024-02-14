@@ -53,7 +53,7 @@ const HomeComponent = (): React.ReactElement => {
           layout="responsive"
         />
       </div>
-      <div className="fixed bottom-[15px] right-[15px] z-10 lg:bottom-[20px] lg:right-[20px]">
+      <div className="fixed bottom-[15px] right-[15px] z-10 lg:bottom-[20px] lg:right-[20px] flex items-center gap-5">
       <WhatsappButton/>
       </div>
     </div>

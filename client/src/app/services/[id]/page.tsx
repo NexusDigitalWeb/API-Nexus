@@ -3,6 +3,7 @@ import Loader from "@/components/Loaders/Loader";
 import Navbar from "@/components/Navbar/Navbar";
 import ServiceInfoNavbar from "@/components/Navbar/ServiceInfoNavbar";
 import BookingsButton from "@/components/buttons/BookingsButton";
+import WhatsappButton from "@/components/buttons/WhatsappButton";
 import { Services } from "@/components/services/ServicesComponent";
 import { getServiceById } from "@/utils/servicesRequest";
 import anime from "animejs";
@@ -91,6 +92,9 @@ const ServicePage = () => {
           </div>
         </div>
       )}
+      <div className="fixed bottom-[15px] right-[15px] z-10 lg:bottom-[20px] lg:right-[20px] flex items-center gap-5">
+      <WhatsappButton/>
+      </div>
     </>
   );
 };

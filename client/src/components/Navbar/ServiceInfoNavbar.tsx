@@ -10,7 +10,7 @@ const ServiceInfoNavbar = () => {
             <Image src='https://res.cloudinary.com/dcvvyhf8p/image/upload/v1702912190/Principal%20web%20Nexus/zy49eamfjbcelqqvchqr.png' alt="go-back-icon" width={30} height={30} className="rotate-[210deg]"/>
         </Link>
 
-        <p className="text-2xl font-extrabold">Nexus.</p>
+        <Link href='/' className="text-2xl font-extrabold">Nexus.</Link>
       </div>
     </div>
   );

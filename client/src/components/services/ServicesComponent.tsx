@@ -5,7 +5,6 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Waypoint } from "react-waypoint";
 import CardsLoader from "../Loaders/CardsLoader";
-import GoBackButton from "../buttons/GoBackButton";
 
 export interface Services {
   _id: string;
@@ -49,7 +48,6 @@ const ServicesComponent = () => {
 
   return (
     <div className="h-full w-full p-2 tablet:flex tablet:flex-col tablet:justify-center tablet:items-center">
-      {/* <GoBackButton/> */}
       <div className="hidden lg:flex">
         <Waypoint onEnter={() => handleWaypointToLeft('.window-animation-button')}/>
       </div>

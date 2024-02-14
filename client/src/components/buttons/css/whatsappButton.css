@@ -49,3 +49,21 @@
     backdrop-filter: blur(4px);
   }
   
+  .Btn {
+    position: relative;
+  }
+  
+  .Btn:hover .chat-message {
+    display: block;
+  }
+  
+  .chat-message {
+    display: none;
+    position: absolute;
+    right: 50px;
+    white-space: nowrap;
+    background-color: #333; /* Ajusta el color de fondo según tu diseño */
+    padding: 8px 5px;
+    border-radius: 5px;
+    background-color: #e2e8f0;
+  }
