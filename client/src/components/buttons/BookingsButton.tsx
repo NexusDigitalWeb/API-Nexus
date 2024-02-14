@@ -60,7 +60,7 @@ const BookingsButton = (): React.ReactElement => {
           onBlur={handleInputBlur}
           onKeyDown={handleKeyDown}
           autoFocus
-          placeholder="Email"
+          placeholder="Escribe tu email"
           className="w-[280px] h-[68px] p-4 flex items-center justify-center rounded-[14px] outline-none text-white text-lg bg-[#191A23] placeholder:text-center tablet:w-[300px] tablet:h-[75px] tablet:text-lg"
         />
       ) : (

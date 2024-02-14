@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import BookingsButton from "../buttons/BookingsButton";
+import GetProposalButton from "../buttons/GetProposalButton";
 
 const HomeComponent = (): React.ReactElement => {
   return (
@@ -38,7 +39,7 @@ const HomeComponent = (): React.ReactElement => {
           estratégico y manejo de redes sociales.
         </p>
         <div className="w-full h-full mt-5 flex justify-center">
-          <BookingsButton />
+          <GetProposalButton />
         </div>
       </div>
       <div className="hidden lg:flex max-h-[450px]">

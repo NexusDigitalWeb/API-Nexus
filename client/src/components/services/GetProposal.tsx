@@ -40,7 +40,7 @@ const GetProposal = () => {
             ayudarte en tu negocio!
           </p>
           <div className="mt-8 xl:mt-[3rem] flex justify-center">
-            <BookingsButton />
+            <GetProposalButton />
           </div>
         </div>
       </div>
