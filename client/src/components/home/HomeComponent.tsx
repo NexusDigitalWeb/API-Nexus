@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import BookingsButton from "../buttons/BookingsButton";
 import GetProposalButton from "../buttons/GetProposalButton";
+import WhatsappButton from "../buttons/WhatsappButton";
 
 const HomeComponent = (): React.ReactElement => {
   return (
@@ -51,6 +52,9 @@ const HomeComponent = (): React.ReactElement => {
           className="w-auto h-auto mt-5 tablet:flex"
           layout="responsive"
         />
+      </div>
+      <div className="fixed bottom-[15px] right-[15px] z-10 lg:bottom-[20px] lg:right-[20px]">
+      <WhatsappButton/>
       </div>
     </div>
   );
