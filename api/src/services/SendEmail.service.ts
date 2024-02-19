@@ -27,7 +27,7 @@ class EmailSender {
                       <h1>¡Hola, es un placer poder estar un paso más cerca de usted!</h1>
       
                       <p>
-                      Espero que estés teniendo un día genial. Nosotros somos <strong>Nexus Digital</strong>, y estamos emocionados de compartir contigo la clave para llevar tu presencia en línea al siguiente nivel.
+                      Espero que estés teniendo un día genial. Nosotros somos <a href="https://nexusdigitalar.com/" target="_blank"><strong>Nexus Digital</strong></a>, y estamos emocionados de compartir contigo la clave para llevar tu presencia en línea al siguiente nivel.
                       </p>
       
                       <p>
@@ -76,7 +76,7 @@ class EmailSender {
                       </p>
       
                       <p>
-                      ¿Quieres saber cómo podemos hacer despegar tu presencia en línea? <br> Responde a este correo para programar una consulta gratuita. Estamos aquí para transformar tu visión digital en realidad.
+                      ¿Quieres saber cómo podemos hacer despegar tu presencia en línea? <br> <strong>Responde a este correo para programar una consulta gratuita.</strong> <br> Estamos aquí para transformar tu visión digital en realidad.
                       </p>
       
                       <p>Gracias por considerarnos. ¡Esperamos con ansias la oportunidad de trabajar contigo!</p>
